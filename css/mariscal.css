@@ -300,3 +300,64 @@ p{margin:0 0 1em}
   .js .aparece{opacity:1;transform:none}
 }
 @media (min-width:1101px){.obra.sola{grid-column:2}}
+
+/* ---------- Color por secciones (23-nov, «la web muy blanca») ----------
+   Cada sección va «pintada» con un color de su logo, como una carta de colores:
+   cielo (portada y contacto: casas blancas bajo cielo azul) · rojo (cinta) · albero (servicios: el amarillo de los recercados
+   andaluces) · azul añil (antes y después: el azul de los zócalos) · cal (trabajos, para que luzcan las fotos) ·
+   amarillo (por qué nosotros) · marino (pie). Ninguna sección negra. */
+:root{--cielo:#DCE7FA;--albero:#FFF0C4;--rojo-t:#CF2A25;--azul-2:#1A44A3}
+.cab{background:transparent}
+.cab.fija{background:rgba(255,255,255,.97)}
+.portada{background:var(--cielo)}
+.portada::before{right:-6%;top:-8%;width:46%;height:62%;background:radial-gradient(closest-side,rgba(249,200,14,.55),rgba(249,200,14,.18) 55%,transparent)}
+.portada__sub,.portada__tel{color:#3A4466}
+.portada .btn--linea{background:rgba(255,255,255,.55)}
+.portada .btn--linea:hover{background:var(--marino)}
+.cinta{background:var(--rojo-t)}
+.cinta::after{display:none}
+.cinta li+li::before,.cinta li::before{background:var(--amarillo)}
+.servicios{background:var(--albero)}
+.servicio{background:#fff}
+.servicios .marca{background:linear-gradient(transparent 64%,rgba(243,146,0,.38) 64% 90%,transparent 90%)}
+.antesdespues{background:var(--azul)}
+.antesdespues .eti{color:var(--amarillo)}
+.antesdespues .titular h2{color:#fff}
+.antesdespues .marca{background:none;color:var(--amarillo)}
+.antesdespues .entrada{color:#DCE5FA}
+.ad__pestanas button{background:rgba(255,255,255,.12);color:#fff}
+.ad__pestanas button:hover{background:rgba(255,255,255,.24)}
+.ad__pestanas button[aria-selected=true]{background:var(--amarillo);color:var(--marino)}
+.ad__pestanas button:focus-visible{outline-color:var(--amarillo)}
+.antesdespues .ad__marco{box-shadow:0 30px 60px -30px rgba(8,16,48,.75)}
+.ad__meta{color:var(--amarillo)}
+.ad__info h3{color:#fff}
+.ad__info p{color:#DCE5FA}
+.antesdespues .btn--linea{color:#fff;box-shadow:inset 0 0 0 1.6px #fff}
+.antesdespues .btn--linea:hover{background:#fff;color:var(--marino)}
+.antesdespues :focus-visible{outline-color:var(--amarillo)}
+.valores{background:var(--amarillo);color:var(--tinta)}
+.valores::before{display:none}
+.valores .titular h2{color:var(--marino)}
+.valores .eti--claro{color:var(--marino)}
+.valores .eti::before{background:var(--marino)}
+.valores .l--oro{color:var(--azul-2)}
+.paso h3 svg{fill:var(--rojo-t)}
+.paso p{color:#2A3352}
+.paso__video{box-shadow:0 18px 34px -22px rgba(20,36,90,.6)}
+.valores :focus-visible{outline-color:var(--marino)}
+.contacto{background:var(--cielo)}
+.contacto__datos,.contacto__datos li{border-color:rgba(20,36,90,.16)}
+.contacto__txt>p{color:#3A4466}
+.contacto__datos span{color:#4A5475}
+.formulario{background:#fff}
+.formulario input,.formulario select,.formulario textarea{background:#F7F8FC}
+.pie{position:relative}
+.pie::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--arcoiris)}
+@media (max-width:1100px){.cab.abierto{background:#fff}}
+/* trabajos: teja suave (el rojo de su logo y de los tejados), para que las tarjetas blancas resalten */
+.obras{background:#FCE6DD}
+.filtros button{box-shadow:inset 0 0 0 1px rgba(207,42,37,.18)}
+.obras .marca{background:linear-gradient(transparent 64%,rgba(249,200,14,.7) 64% 90%,transparent 90%)}
+@media (max-width:860px){.portada::before{top:auto;bottom:-4%;right:-25%;width:100%;height:46%}}
+.obra__ver{color:var(--rojo-t)}
